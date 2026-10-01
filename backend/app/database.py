@@ -34,3 +34,6 @@ if __name__ == "__main__":
     except Exception as e:
         print("Database connection failed:")
         print(e)
+from app.models.incident import Incident
+
+Base.metadata.create_all(bind=engine)
