@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 
 from app.routes.incidents import router as incident_router
+from app.routes.weather import router as weather_router
+from app.routes.sensors import router as sensor_router
+from app.routes.traffic import router as traffic_router
 
 app = FastAPI(
     title="Bengaluru Civic Brain API",
@@ -23,3 +26,6 @@ def health():
 
 
 app.include_router(incident_router)
+app.include_router(weather_router)
+app.include_router(sensor_router)
+app.include_router(traffic_router)
