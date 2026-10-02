@@ -10,6 +10,10 @@ from app.routes.traffic import router as traffic_router
 from app.routes.root_cause import router as root_cause_router
 from app.models.infrastructure import Infrastructure
 from app.routes.infrastructure import router as infrastructure_router
+from app.models.cluster import Cluster
+from app.models.root_cause import RootCause
+from app.models.recommendation import Recommendation
+
 Base.metadata.create_all(bind=engine)
 app = FastAPI(
     title="Bengaluru Civic Brain API",
