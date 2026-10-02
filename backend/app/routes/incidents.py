@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
+from geoalchemy2.elements import WKTElement
 
 from app.database import get_db
 from app.models.incident import Incident
@@ -16,7 +17,13 @@ def create_incident(
     incident: IncidentCreate,
     db: Session = Depends(get_db)
 ):
-    new_incident = Incident(**incident.model_dump())
+    new_incident = Incident(
+        **incident.model_dump(),
+        location=WKTElement(
+            f"POINT({incident.longitude} {incident.latitude})",
+            srid=4326
+        )
+    )
 
     db.add(new_incident)
     db.commit()

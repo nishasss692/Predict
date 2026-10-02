@@ -12,7 +12,6 @@ def get_cluster_evidence(
     db: Session,
     incident_ids: list[str]
 ):
-    # 1. Get incidents belonging to the cluster
     incidents = (
         db.query(Incident)
         .filter(Incident.incident_id.in_(incident_ids))
@@ -27,23 +26,19 @@ def get_cluster_evidence(
             "traffic": []
         }
 
-    # Determine cluster time range
     timestamps = [incident.timestamp for incident in incidents]
 
     start_time = min(timestamps)
     end_time = max(timestamps)
 
-    # Add a small time window around the cluster
     window_start = start_time - timedelta(hours=1)
     window_end = end_time + timedelta(hours=1)
 
-    # Areas involved in the cluster
     areas = list({
         incident.area
         for incident in incidents
     })
 
-    # 2. Weather around the cluster time
     weather = (
         db.query(Weather)
         .filter(
@@ -53,7 +48,6 @@ def get_cluster_evidence(
         .all()
     )
 
-    # 3. Drain sensor readings from the relevant areas
     sensors = (
         db.query(Sensor)
         .filter(
@@ -64,7 +58,6 @@ def get_cluster_evidence(
         .all()
     )
 
-    # 4. Traffic readings from the relevant areas
     traffic = (
         db.query(Traffic)
         .filter(
@@ -76,8 +69,51 @@ def get_cluster_evidence(
     )
 
     return {
-        "incidents": incidents,
-        "weather": weather,
-        "sensors": sensors,
-        "traffic": traffic
+        "incidents": [
+            {
+                "incident_id": i.incident_id,
+                "area": i.area,
+                "type": i.type,
+                "description": i.description,
+                "latitude": i.latitude,
+                "longitude": i.longitude,
+                "timestamp": i.timestamp,
+                "severity": i.severity,
+            }
+            for i in incidents
+        ],
+
+        "weather": [
+            {
+                "timestamp": w.timestamp,
+                "rainfall_mm": w.rainfall_mm,
+                "temperature_c": w.temperature_c,
+            }
+            for w in weather
+        ],
+
+        "sensors": [
+            {
+                "sensor_id": s.sensor_id,
+                "area": s.area,
+                "latitude": s.latitude,
+                "longitude": s.longitude,
+                "timestamp": s.timestamp,
+                "water_level": s.water_level,
+                "status": s.status,
+            }
+            for s in sensors
+        ],
+
+        "traffic": [
+            {
+                "area": t.area,
+                "latitude": t.latitude,
+                "longitude": t.longitude,
+                "timestamp": t.timestamp,
+                "average_speed_kmh": t.average_speed_kmh,
+                "congestion_level": t.congestion_level,
+            }
+            for t in traffic
+        ]
     }

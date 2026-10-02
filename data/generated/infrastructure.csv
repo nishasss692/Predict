@@ -1,0 +1,51 @@
+infrastructure_id,type,area,latitude,longitude,status
+INF001,drain,Koramangala,12.9352,77.6245,active
+INF002,drain,Koramangala,12.9358,77.6251,active
+INF003,drainage_outlet,Koramangala,12.9348,77.6239,active
+INF004,culvert,Koramangala,12.9361,77.6248,active
+INF005,stormwater_drain,Koramangala,12.9355,77.6242,active
+INF006,drain,Koramangala,12.9346,77.6255,active
+INF007,drainage_outlet,Koramangala,12.9364,77.6237,active
+INF008,stormwater_drain,Koramangala,12.9349,77.6249,blocked
+INF009,culvert,Koramangala,12.9357,77.6236,active
+INF010,drain,Koramangala,12.9362,77.6253,active
+INF011,drain,HSR Layout,12.9116,77.6435,active
+INF012,drain,HSR Layout,12.9122,77.6441,active
+INF013,stormwater_drain,HSR Layout,12.9109,77.6428,active
+INF014,drainage_outlet,HSR Layout,12.9127,77.6438,active
+INF015,culvert,HSR Layout,12.9113,77.6447,active
+INF016,drain,BTM Layout,12.9166,77.6101,active
+INF017,drain,BTM Layout,12.9172,77.6095,active
+INF018,stormwater_drain,BTM Layout,12.9158,77.6110,active
+INF019,drainage_outlet,BTM Layout,12.9161,77.6089,active
+INF020,culvert,BTM Layout,12.9178,77.6104,active
+INF021,drain,Indiranagar,12.9784,77.6408,active
+INF022,stormwater_drain,Indiranagar,12.9778,77.6415,active
+INF023,drainage_outlet,Indiranagar,12.9791,77.6399,active
+INF024,culvert,Indiranagar,12.9789,77.6421,active
+INF025,drain,Indiranagar,12.9773,77.6402,active
+INF026,drain,Whitefield,12.9698,77.7499,active
+INF027,stormwater_drain,Whitefield,12.9705,77.7506,active
+INF028,drainage_outlet,Whitefield,12.9689,77.7488,active
+INF029,culvert,Whitefield,12.9711,77.7494,active
+INF030,drain,Whitefield,12.9692,77.7510,active
+INF031,drain,Marathahalli,12.9591,77.6974,active
+INF032,stormwater_drain,Marathahalli,12.9585,77.6981,active
+INF033,drainage_outlet,Marathahalli,12.9600,77.6967,active
+INF034,culvert,Marathahalli,12.9597,77.6990,active
+INF035,drain,Marathahalli,12.9588,77.6962,maintenance
+INF036,drain,Bellandur,12.9255,77.6762,active
+INF037,stormwater_drain,Bellandur,12.9248,77.6770,active
+INF038,drainage_outlet,Bellandur,12.9262,77.6755,active
+INF039,culvert,Bellandur,12.9259,77.6777,active
+INF040,drain,Bellandur,12.9244,77.6758,blocked
+INF041,drain,Jayanagar,12.9299,77.5827,active
+INF042,stormwater_drain,Jayanagar,12.9305,77.5834,active
+INF043,drainage_outlet,Jayanagar,12.9292,77.5819,active
+INF044,culvert,Jayanagar,12.9310,77.5822,active
+INF045,drain,Jayanagar,12.9287,77.5830,active
+INF046,drain,JP Nagar,12.9063,77.5857,active
+INF047,stormwater_drain,JP Nagar,12.9057,77.5864,active
+INF048,drainage_outlet,JP Nagar,12.9070,77.5849,active
+INF049,culvert,JP Nagar,12.9068,77.5869,active
+INF050,drain,Rajajinagar,12.9910,77.5530,active
