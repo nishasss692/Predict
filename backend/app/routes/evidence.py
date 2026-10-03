@@ -1,38 +1,27 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from app.schemas.evidence import EvidenceResponse
+
 from app.database import get_db
-from app.services.clustering_service import cluster_incidents
-from app.services.cluster_output_service import build_cluster_output
+from app.models.cluster import Cluster
 from app.services.evidence_service import get_cluster_evidence
 
 
 router = APIRouter(
     prefix="/clusters",
-    tags=["Cluster Evidence"]
+    tags=["Evidence"]
 )
 
 
-@router.get(
-    "/{cluster_id}/evidence",
-    response_model=EvidenceResponse
-)
+@router.get("/{cluster_id}/evidence")
 def get_evidence(
     cluster_id: str,
     db: Session = Depends(get_db)
 ):
-    # Generate current clusters
-    clustering_results = cluster_incidents(db)
-    clusters = build_cluster_output(clustering_results)
-
-    # Find requested cluster
-    cluster = next(
-        (
-            cluster
-            for cluster in clusters
-            if cluster["cluster_id"] == cluster_id
-        ),
-        None
+    # Find the saved cluster
+    cluster = (
+        db.query(Cluster)
+        .filter(Cluster.cluster_id == cluster_id)
+        .first()
     )
 
     if cluster is None:
@@ -41,12 +30,27 @@ def get_evidence(
             detail=f"Cluster {cluster_id} not found"
         )
 
+    # Get the incident IDs stored for this cluster
+    incident_ids = cluster.incident_ids
+
+    if not incident_ids:
+        return {
+            "cluster_id": cluster_id,
+            "data": {
+                "incidents": [],
+                "weather": [],
+                "sensors": [],
+                "traffic": []
+            }
+        }
+
+    # Retrieve evidence using the saved incident IDs
     evidence = get_cluster_evidence(
         db,
-        cluster["incident_ids"]
+        incident_ids
     )
 
     return {
         "cluster_id": cluster_id,
-        "evidence": evidence
+        "data": evidence
     }
