@@ -11,7 +11,7 @@ def run_clustering(incidents):
         latitude
         longitude
         timestamp
-        type
+        predicted_type
 
     Returns:
         incident_results: DataFrame with clustering information
@@ -101,7 +101,7 @@ def run_clustering(incidents):
         incident_ids = group["incident_id"].tolist()
 
         categories = (
-            group["type"]
+            group["predicted_type"]
             .dropna()
             .unique()
             .tolist()
