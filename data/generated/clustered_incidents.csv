@@ -1,0 +1,101 @@
+incident_id,area,type,description,latitude,longitude,timestamp,severity,cluster
+INC001,HSR Layout,waterlogging,Waterlogging reported in HSR Layout,12.9116,77.6741,2026-09-20 10:41:00,high,0
+INC002,Indiranagar,pothole,Pothole reported in Indiranagar,12.9784,77.6408,2026-09-20 07:44:00,low,1
+INC003,JP Nagar,waterlogging,Waterlogging reported in JP Nagar,12.9063,77.5857,2026-09-20 13:12:00,high,2
+INC004,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 09:43:00,low,3
+INC005,Indiranagar,traffic_disruption,Traffic Disruption reported in Indiranagar,12.9784,77.6408,2026-09-20 06:27:00,high,1
+INC006,JP Nagar,pothole,Pothole reported in JP Nagar,12.9063,77.5857,2026-09-20 17:05:00,high,2
+INC007,JP Nagar,garbage,Garbage reported in JP Nagar,12.9063,77.5857,2026-09-20 13:39:00,low,2
+INC008,Rajajinagar,sewage,Sewage reported in Rajajinagar,12.991,77.553,2026-09-20 08:43:00,low,4
+INC009,Bellandur,sewage,Sewage reported in Bellandur,12.9304,77.6784,2026-09-20 08:39:00,medium,5
+INC010,Indiranagar,sewage,Sewage reported in Indiranagar,12.9784,77.6408,2026-09-20 07:34:00,low,1
+INC011,Bellandur,waterlogging,Waterlogging reported in Bellandur,12.9304,77.6784,2026-09-20 11:52:00,medium,5
+INC012,Rajajinagar,sewage,Sewage reported in Rajajinagar,12.991,77.553,2026-09-20 13:50:00,low,4
+INC013,JP Nagar,waterlogging,Waterlogging reported in JP Nagar,12.9063,77.5857,2026-09-20 07:20:00,medium,2
+INC014,JP Nagar,sewage,Sewage reported in JP Nagar,12.9063,77.5857,2026-09-20 16:33:00,high,2
+INC015,Marathahalli,traffic_disruption,Traffic Disruption reported in Marathahalli,12.9591,77.6974,2026-09-20 07:11:00,low,6
+INC016,Koramangala,pothole,Pothole reported in Koramangala,12.9352,77.6245,2026-09-20 07:21:00,medium,3
+INC017,Indiranagar,waterlogging,Waterlogging reported in Indiranagar,12.9784,77.6408,2026-09-20 10:44:00,medium,1
+INC018,Jayanagar,sewage,Sewage reported in Jayanagar,12.925,77.5938,2026-09-20 12:19:00,low,7
+INC019,Marathahalli,pothole,Pothole reported in Marathahalli,12.9591,77.6974,2026-09-20 10:33:00,high,6
+INC020,HSR Layout,traffic_disruption,Traffic Disruption reported in HSR Layout,12.9116,77.6741,2026-09-20 08:55:00,high,0
+INC021,JP Nagar,pothole,Pothole reported in JP Nagar,12.9063,77.5857,2026-09-20 13:53:00,low,2
+INC022,Bellandur,sewage,Sewage reported in Bellandur,12.9304,77.6784,2026-09-20 17:44:00,high,5
+INC023,JP Nagar,pothole,Pothole reported in JP Nagar,12.9063,77.5857,2026-09-20 11:32:00,high,2
+INC024,Koramangala,pothole,Pothole reported in Koramangala,12.9352,77.6245,2026-09-20 11:23:00,low,3
+INC025,Bellandur,sewage,Sewage reported in Bellandur,12.9304,77.6784,2026-09-20 09:36:00,low,5
+INC026,Rajajinagar,sewage,Sewage reported in Rajajinagar,12.991,77.553,2026-09-20 17:11:00,low,4
+INC027,Jayanagar,garbage,Garbage reported in Jayanagar,12.925,77.5938,2026-09-20 13:49:00,high,7
+INC028,BTM Layout,sewage,Sewage reported in BTM Layout,12.9166,77.6101,2026-09-20 10:12:00,low,8
+INC029,JP Nagar,traffic_disruption,Traffic Disruption reported in JP Nagar,12.9063,77.5857,2026-09-20 15:58:00,medium,2
+INC030,Bellandur,traffic_disruption,Traffic Disruption reported in Bellandur,12.9304,77.6784,2026-09-20 12:10:00,medium,5
+INC031,Indiranagar,pothole,Pothole reported in Indiranagar,12.9784,77.6408,2026-09-20 14:25:00,high,1
+INC032,HSR Layout,waterlogging,Waterlogging reported in HSR Layout,12.9116,77.6741,2026-09-20 08:36:00,low,0
+INC033,BTM Layout,garbage,Garbage reported in BTM Layout,12.9166,77.6101,2026-09-20 07:05:00,high,8
+INC034,Bellandur,garbage,Garbage reported in Bellandur,12.9304,77.6784,2026-09-20 13:59:00,high,5
+INC035,JP Nagar,sewage,Sewage reported in JP Nagar,12.9063,77.5857,2026-09-20 06:11:00,high,2
+INC036,HSR Layout,traffic_disruption,Traffic Disruption reported in HSR Layout,12.9116,77.6741,2026-09-20 16:56:00,medium,0
+INC037,Marathahalli,waterlogging,Waterlogging reported in Marathahalli,12.9591,77.6974,2026-09-20 13:25:00,medium,6
+INC038,BTM Layout,garbage,Garbage reported in BTM Layout,12.9166,77.6101,2026-09-20 10:29:00,low,8
+INC039,JP Nagar,pothole,Pothole reported in JP Nagar,12.9063,77.5857,2026-09-20 07:48:00,high,2
+INC040,Whitefield,traffic_disruption,Traffic Disruption reported in Whitefield,12.9698,77.75,2026-09-20 09:23:00,high,9
+INC041,BTM Layout,sewage,Sewage reported in BTM Layout,12.9166,77.6101,2026-09-20 15:12:00,low,8
+INC042,JP Nagar,waterlogging,Waterlogging reported in JP Nagar,12.9063,77.5857,2026-09-20 11:31:00,high,2
+INC043,Jayanagar,waterlogging,Waterlogging reported in Jayanagar,12.925,77.5938,2026-09-20 12:11:00,low,7
+INC044,Whitefield,pothole,Pothole reported in Whitefield,12.9698,77.75,2026-09-20 10:06:00,low,9
+INC045,Rajajinagar,waterlogging,Waterlogging reported in Rajajinagar,12.991,77.553,2026-09-20 14:17:00,low,4
+INC046,HSR Layout,traffic_disruption,Traffic Disruption reported in HSR Layout,12.9116,77.6741,2026-09-20 08:11:00,low,0
+INC047,Jayanagar,traffic_disruption,Traffic Disruption reported in Jayanagar,12.925,77.5938,2026-09-20 10:31:00,low,7
+INC048,JP Nagar,traffic_disruption,Traffic Disruption reported in JP Nagar,12.9063,77.5857,2026-09-20 09:36:00,medium,2
+INC049,JP Nagar,pothole,Pothole reported in JP Nagar,12.9063,77.5857,2026-09-20 11:19:00,high,2
+INC050,Bellandur,sewage,Sewage reported in Bellandur,12.9304,77.6784,2026-09-20 14:49:00,medium,5
+INC051,Jayanagar,waterlogging,Waterlogging reported in Jayanagar,12.925,77.5938,2026-09-20 09:50:00,low,7
+INC052,HSR Layout,sewage,Sewage reported in HSR Layout,12.9116,77.6741,2026-09-20 16:02:00,low,0
+INC053,JP Nagar,pothole,Pothole reported in JP Nagar,12.9063,77.5857,2026-09-20 09:45:00,high,2
+INC054,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 16:46:00,high,3
+INC055,Koramangala,pothole,Pothole reported in Koramangala,12.9352,77.6245,2026-09-20 06:32:00,low,3
+INC056,Marathahalli,waterlogging,Waterlogging reported in Marathahalli,12.9591,77.6974,2026-09-20 10:03:00,high,6
+INC057,Whitefield,garbage,Garbage reported in Whitefield,12.9698,77.75,2026-09-20 15:12:00,low,9
+INC058,BTM Layout,traffic_disruption,Traffic Disruption reported in BTM Layout,12.9166,77.6101,2026-09-20 14:04:00,high,8
+INC059,Indiranagar,garbage,Garbage reported in Indiranagar,12.9784,77.6408,2026-09-20 09:14:00,medium,1
+INC060,HSR Layout,waterlogging,Waterlogging reported in HSR Layout,12.9116,77.6741,2026-09-20 13:21:00,high,0
+INC061,Marathahalli,garbage,Garbage reported in Marathahalli,12.9591,77.6974,2026-09-20 13:58:00,medium,6
+INC062,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 12:52:00,low,3
+INC063,Marathahalli,waterlogging,Waterlogging reported in Marathahalli,12.9591,77.6974,2026-09-20 09:16:00,low,6
+INC064,Indiranagar,traffic_disruption,Traffic Disruption reported in Indiranagar,12.9784,77.6408,2026-09-20 08:23:00,medium,1
+INC065,Bellandur,pothole,Pothole reported in Bellandur,12.9304,77.6784,2026-09-20 13:53:00,medium,5
+INC066,Indiranagar,waterlogging,Waterlogging reported in Indiranagar,12.9784,77.6408,2026-09-20 15:23:00,medium,1
+INC067,HSR Layout,waterlogging,Waterlogging reported in HSR Layout,12.9116,77.6741,2026-09-20 15:13:00,high,0
+INC068,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 08:50:00,low,3
+INC069,Bellandur,garbage,Garbage reported in Bellandur,12.9304,77.6784,2026-09-20 09:38:00,medium,5
+INC070,Bellandur,waterlogging,Waterlogging reported in Bellandur,12.9304,77.6784,2026-09-20 12:28:00,low,5
+INC071,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 18:00:00,high,3
+INC072,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 18:04:00,high,3
+INC073,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 18:08:00,medium,3
+INC074,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 18:12:00,high,3
+INC075,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 18:16:00,medium,3
+INC076,Koramangala,sewage,Sewage reported in Koramangala,12.9352,77.6245,2026-09-20 18:20:00,high,3
+INC077,Koramangala,sewage,Sewage reported in Koramangala,12.9352,77.6245,2026-09-20 18:24:00,medium,3
+INC078,Koramangala,sewage,Sewage reported in Koramangala,12.9352,77.6245,2026-09-20 18:28:00,high,3
+INC079,Koramangala,traffic_disruption,Traffic Disruption reported in Koramangala,12.9352,77.6245,2026-09-20 18:32:00,high,3
+INC080,Koramangala,traffic_disruption,Traffic Disruption reported in Koramangala,12.9352,77.6245,2026-09-20 18:36:00,high,3
+INC081,Koramangala,traffic_disruption,Traffic Disruption reported in Koramangala,12.9352,77.6245,2026-09-20 18:40:00,medium,3
+INC082,Koramangala,pothole,Pothole reported in Koramangala,12.9352,77.6245,2026-09-20 18:44:00,medium,3
+INC083,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 18:48:00,high,3
+INC084,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 18:52:00,high,3
+INC085,Koramangala,sewage,Sewage reported in Koramangala,12.9352,77.6245,2026-09-20 18:56:00,high,3
+INC086,Koramangala,traffic_disruption,Traffic Disruption reported in Koramangala,12.9352,77.6245,2026-09-20 19:00:00,high,3
+INC087,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 19:04:00,medium,3
+INC088,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 19:08:00,high,3
+INC089,Koramangala,sewage,Sewage reported in Koramangala,12.9352,77.6245,2026-09-20 19:12:00,medium,3
+INC090,Koramangala,traffic_disruption,Traffic Disruption reported in Koramangala,12.9352,77.6245,2026-09-20 19:16:00,high,3
+INC091,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 19:20:00,high,3
+INC092,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 19:24:00,medium,3
+INC093,Koramangala,sewage,Sewage reported in Koramangala,12.9352,77.6245,2026-09-20 19:28:00,high,3
+INC094,Koramangala,traffic_disruption,Traffic Disruption reported in Koramangala,12.9352,77.6245,2026-09-20 19:32:00,high,3
+INC095,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 19:36:00,high,3
+INC096,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 19:40:00,medium,3
+INC097,Koramangala,sewage,Sewage reported in Koramangala,12.9352,77.6245,2026-09-20 19:44:00,medium,3
+INC098,Koramangala,traffic_disruption,Traffic Disruption reported in Koramangala,12.9352,77.6245,2026-09-20 19:48:00,high,3
+INC099,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 19:52:00,high,3
+INC100,Koramangala,waterlogging,Waterlogging reported in Koramangala,12.9352,77.6245,2026-09-20 19:56:00,medium,3
