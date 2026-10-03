@@ -4,14 +4,13 @@ from pydantic import BaseModel
 
 class IncidentBase(BaseModel):
     incident_id: str
-    timestamp: datetime
+    area: str
+    type: str
+    description: str
     latitude: float
     longitude: float
-    category: str
-    description: str
+    timestamp: datetime
     severity: str
-    source: str
-    status: str
 
 
 class IncidentCreate(IncidentBase):
