@@ -1,0 +1,283 @@
+@import 'tailwindcss';
+
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/jetbrains-mono';
+
+/* ------------------------------------------------------------------
+   Bengaluru Civic Brain - design tokens
+   Dark civic-intelligence command center.
+   Near-black navy substrate, cyan/blue operational accents,
+   violet reserved for analytical (model) surfaces.
+   ------------------------------------------------------------------ */
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SFMono-Regular', 'Cascadia Mono', monospace;
+
+  /* Substrate */
+  --color-ink-975: #04070d;
+  --color-ink-950: #060a12;
+  --color-ink-900: #090f1b;
+  --color-ink-850: #0c1424;
+  --color-ink-800: #101a2c;
+  --color-ink-750: #142136;
+  --color-ink-700: #182742;
+
+  /* Hairlines */
+  --color-line: #1b2942;
+  --color-line-strong: #27395a;
+
+  /* Type. mist-400 and mist-500 are the dimmest text tokens; both hold at
+     least 4.5:1 on every surface in this file, so captions stay readable. */
+  --color-mist-50: #eef4ff;
+  --color-mist-100: #dbe6f7;
+  --color-mist-200: #b9c9e2;
+  --color-mist-300: #93a8c8;
+  --color-mist-400: #7d91b0;
+  --color-mist-500: #6e809f;
+
+  /* Operational accent. blue-light is the text-weight blue: blue-signal is
+     too dark to clear 4.5:1 once used as text on a tinted surface. */
+  --color-cyan-signal: #22d3ee;
+  --color-blue-signal: #3b82f6;
+  --color-blue-light: #60a5fa;
+  --color-blue-deep: #1d4ed8;
+
+  /* Analytical / model */
+  --color-violet-analysis: #a78bfa;
+  --color-violet-deep: #7c3aed;
+
+  /* Condition */
+  --color-alert-red: #f43f5e;
+  --color-alert-orange: #fb923c;
+  --color-alert-amber: #fbbf24;
+  --color-healthy-teal: #2dd4bf;
+  --color-healthy-green: #34d399;
+
+  --radius-panel: 0.75rem;
+
+  --shadow-panel: 0 1px 0 0 rgb(255 255 255 / 0.03) inset, 0 18px 40px -24px rgb(0 0 0 / 0.9);
+  --shadow-focus: 0 0 0 2px var(--color-ink-975), 0 0 0 4px var(--color-cyan-signal);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scrollbar-color: var(--color-line-strong) transparent;
+  }
+
+  body {
+    background-color: var(--color-ink-975);
+    color: var(--color-mist-100);
+    font-family: var(--font-sans);
+    font-feature-settings: 'cv05' 1, 'ss03' 1, 'tnum' 0;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Ambient depth. Fixed so it never scrolls with content. */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(60rem 40rem at 18% -10%, rgb(29 78 216 / 0.16), transparent 70%),
+      radial-gradient(48rem 32rem at 92% 0%, rgb(124 58 237 / 0.12), transparent 70%),
+      linear-gradient(180deg, var(--color-ink-950), var(--color-ink-975) 60%);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-cyan-signal);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: rgb(34 211 238 / 0.28);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-line);
+    border: 3px solid transparent;
+    background-clip: content-box;
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-line-strong);
+    background-clip: content-box;
+  }
+}
+
+@layer components {
+  /* Frosted panel. Used sparingly - only where content floats over the map. */
+  .glass-panel {
+    background: linear-gradient(180deg, rgb(16 26 44 / 0.82), rgb(9 15 27 / 0.9));
+    backdrop-filter: blur(14px) saturate(130%);
+    border: 1px solid rgb(39 57 90 / 0.7);
+    box-shadow: var(--shadow-panel);
+  }
+
+  /* Uppercase micro-label used for every field / metric caption. */
+  .metric-label {
+    font-size: 0.6875rem;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--color-mist-400);
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Motion. Subtle, short, and always optional: the reduced-motion block
+   at the end of this file collapses every duration to ~0.
+   ------------------------------------------------------------------ */
+@keyframes civic-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes civic-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes civic-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes civic-slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes civic-slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes civic-kpi {
+  from {
+    color: var(--color-cyan-signal);
+  }
+  to {
+    color: inherit;
+  }
+}
+@keyframes civic-pulse-ring {
+  from {
+    box-shadow: 0 0 0 0 rgb(34 211 238 / 0.45);
+  }
+  to {
+    box-shadow: 0 0 0 6px rgb(34 211 238 / 0);
+  }
+}
+
+.animate-fade-in {
+  animation: civic-fade-in 200ms ease-out both;
+}
+.animate-page {
+  animation: civic-fade-in 200ms ease-out both;
+}
+.animate-rise {
+  animation: civic-rise 260ms ease-out both;
+}
+.animate-scale-in {
+  animation: civic-scale-in 200ms ease-out both;
+}
+.animate-slide-in-right {
+  animation: civic-slide-in-right 220ms ease-out both;
+}
+.animate-slide-in-left {
+  animation: civic-slide-in-left 220ms ease-out both;
+}
+.animate-kpi {
+  display: inline-block;
+  animation: civic-kpi 700ms ease-out both;
+}
+.animate-pulse-ring {
+  animation: civic-pulse-ring 900ms ease-out both;
+}
+
+/* ------------------------------------------------------------------
+   Leaflet surface overrides - keep the map inside the design system.
+   ------------------------------------------------------------------ */
+.leaflet-container {
+  background: var(--color-ink-900);
+  font-family: var(--font-sans);
+  outline: none;
+}
+
+.leaflet-control-attribution {
+  background: rgb(6 10 18 / 0.82) !important;
+  color: var(--color-mist-500) !important;
+  font-size: 10px !important;
+  border-top-left-radius: 4px;
+}
+.leaflet-control-attribution a {
+  color: var(--color-mist-400) !important;
+}
+
+.leaflet-bar,
+.leaflet-control-zoom {
+  border: 1px solid var(--color-line) !important;
+  box-shadow: none !important;
+}
+.leaflet-bar a {
+  background: var(--color-ink-850) !important;
+  color: var(--color-mist-200) !important;
+  border-bottom-color: var(--color-line) !important;
+}
+.leaflet-bar a:hover {
+  background: var(--color-ink-750) !important;
+  color: var(--color-cyan-signal) !important;
+}
+.leaflet-bar a.leaflet-disabled {
+  background: var(--color-ink-900) !important;
+  color: var(--color-mist-500) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

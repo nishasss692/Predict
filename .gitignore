@@ -38,6 +38,9 @@ venv.bak/
 .env
 .env.*
 !.env.example
+# Frontend transport mode configs (non-secret; required by npm scripts)
+!frontend/.env.mock
+!frontend/.env.live
 
 # Node / Frontend
 node_modules/
